@@ -26,7 +26,7 @@ var baseMaps = {
 Esri_WorldImagery.addTo(map)
 L.control.layers(baseMaps).addTo(map);
 
-tile_map = L.tileLayer('/data/images/tiles/{z}/{x}/{y}.png', {tms:true});
+tile_map = L.tileLayer('data/images/tiles/{z}/{x}/{y}.png', {tms:true});
 tile_map.addTo(map);
 tile_map.bringToFront();
 
