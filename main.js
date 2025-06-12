@@ -4,7 +4,7 @@ const tile_center = [52.52430,11.03388]
 var map = L.map('map', {
     center: tile_center,
     zoom: 11,
-    minZoom: 9,  // Minimum zoom level
+    minZoom: 8,  // Minimum zoom level
     maxZoom: max_zoom   // Maximum zoom level
 });
 
