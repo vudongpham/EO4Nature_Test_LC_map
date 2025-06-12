@@ -34,10 +34,7 @@ tile_map.bringToFront();
 var slider = document.getElementById('slider');
 var sliderValue = document.getElementById('slider-value');
 
-var slider = document.getElementById('slider');
-var sliderValue = document.getElementById('slider-value');
-
 slider.addEventListener('input', function(e) {
-tile_map.setOpacity(parseInt(e.target.value, 10) / 100)
-sliderValue.textContent = e.target.value + '%';
+    tile_map.setOpacity(parseInt(e.target.value, 10) / 100)
+    sliderValue.textContent = e.target.value + '%';
 });
