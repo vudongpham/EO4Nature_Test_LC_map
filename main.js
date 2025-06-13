@@ -1,5 +1,5 @@
 const max_zoom = 15
-const tile_center = [52.52430,11.03388]
+const tile_center = [52.52337,8.82571]
 
 var map = L.map('map', {
     center: tile_center,

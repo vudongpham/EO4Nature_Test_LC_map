@@ -4,19 +4,27 @@ import shutil
 import numpy as np
 
 color_dict = {
-    1 : np.array([255, 0, 0]),
-    2 : np.array([34, 139, 34]),
-    3 : np.array([128, 255, 0]),
-    4 : np.array([255, 8, 0]),
-    5 : np.array([128, 64, 0]),
-    6 : np.array([204, 242, 77]),
-    7 : np.array([255, 255, 128]),
-    8 : np.array([255, 128, 255]),
-    9 : np.array([191, 191, 191]),
-    10 : np.array([0, 128, 255]),
-    11 : np.array([0, 255, 255]),
-    254 : np.array([255, 255, 255]),
-    255 : np.array([255, 255, 255])
+    1000 : np.array([255, 0, 0]),
+    2100 : np.array([0, 166, 0]),
+    2200 : np.array([128, 255, 0]),
+    2300 : np.array([0, 153, 0]),
+    3100 : np.array([255, 187, 34]),
+    4100 : np.array([255, 255, 168]),
+    4200 : np.array([255, 230, 166]),
+    4300 : np.array([230, 128, 0]),
+    4400 : np.array([230, 166, 0]),
+    4500 : np.array([242, 204, 0]),
+    4600 : np.array([242, 166, 77]),
+    4700 : np.array([230, 230, 77]),
+    4800 : np.array([255, 230, 77]),
+    4900 : np.array([230, 204, 77]),
+    5100 : np.array([204, 242, 77]),
+    5200 : np.array([166, 166, 255]),
+    5300 : np.array([77, 77, 255]),
+    6100 : np.array([250, 230, 160]),
+    7100 : np.array([180, 180, 180]),
+    8100 : np.array([128, 242, 230]),
+    9100 : np.array([0, 255, 255]),
 }
 
 def toRaster_rgb(source_image, out_image, arr_in):
@@ -64,8 +72,8 @@ if __name__ == '__main__':
     if os.path.exists("images/image_reprojected.tif"):
         os.remove("images/image_reprojected.tif")
 
-    source_image = 'images/clc_2021.tif'
-    rgb_out =  'images/clc_2021_rgb.tif'
+    source_image = 'images/map_2021_all.tif'
+    rgb_out =  'images/map_2021_rgb.tif'
     max_zoom = 15
     nodata='255,255,255'
     convert_to_rgb(source_image, rgb_out, color_dict)

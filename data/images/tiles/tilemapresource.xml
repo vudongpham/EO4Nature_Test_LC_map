@@ -3,8 +3,8 @@
       <Title>image_reprojected.tif</Title>
       <Abstract></Abstract>
       <SRS>EPSG:3857</SRS>
-      <BoundingBox minx="10.80847335086599" miny="52.39714394216589" maxx="11.25688028425111" maxy="52.67053377340019"/>
-      <Origin x="10.80847335086599" y="52.39714394216589"/>
+      <BoundingBox minx="8.59616000359833" miny="52.39551404239926" maxx="9.04544035168542" maxy="52.66944362610612"/>
+      <Origin x="8.59616000359833" y="52.39551404239926"/>
       <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
       <TileSets profile="mercator">
         <TileSet href="0" units-per-pixel="156543.03390000000945" order="0"/>
