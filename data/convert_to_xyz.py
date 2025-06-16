@@ -7,24 +7,15 @@ color_dict = {
     1000 : np.array([255, 0, 0]),
     2100 : np.array([0, 166, 0]),
     2200 : np.array([128, 255, 0]),
-    2300 : np.array([0, 153, 0]),
+    2300 : np.array([128, 255, 0]),
     3100 : np.array([255, 187, 34]),
-    4100 : np.array([255, 255, 168]),
-    4200 : np.array([255, 230, 166]),
-    4300 : np.array([230, 128, 0]),
-    4400 : np.array([230, 166, 0]),
-    4500 : np.array([242, 204, 0]),
-    4600 : np.array([242, 166, 77]),
-    4700 : np.array([230, 230, 77]),
-    4800 : np.array([255, 230, 77]),
-    4900 : np.array([230, 204, 77]),
+    4100 : np.array([255, 255, 128]),
+    4200 : np.array([255, 255, 128]),
     5100 : np.array([204, 242, 77]),
     5200 : np.array([166, 166, 255]),
     5300 : np.array([77, 77, 255]),
-    6100 : np.array([250, 230, 160]),
     7100 : np.array([180, 180, 180]),
     8100 : np.array([128, 242, 230]),
-    9100 : np.array([0, 255, 255]),
 }
 
 def toRaster_rgb(source_image, out_image, arr_in):
@@ -78,6 +69,7 @@ if __name__ == '__main__':
     nodata='255,255,255'
     convert_to_rgb(source_image, rgb_out, color_dict)
 
-    shutil.rmtree('images/tiles')
+    if os.path.isdir('images/tiles'):
+        shutil.rmtree('images/tiles')
     os.system(f'gdalwarp -srcnodata {nodata} -dstalpha  -t_srs EPSG:3857 {rgb_out} images/image_reprojected.tif')
     os.system(f'gdal2tiles --verbose  --processes=4  -z 0-{max_zoom} images/image_reprojected.tif images/tiles/')
