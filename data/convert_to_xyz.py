@@ -72,4 +72,4 @@ if __name__ == '__main__':
     if os.path.isdir('images/tiles'):
         shutil.rmtree('images/tiles')
     os.system(f'gdalwarp -srcnodata {nodata} -dstalpha  -t_srs EPSG:3857 {rgb_out} images/image_reprojected.tif')
-    os.system(f'gdal2tiles --verbose  --processes=4  -z 0-{max_zoom} images/image_reprojected.tif images/tiles/')
+    os.system(f'gdal2tiles --verbose --webp-quality=50 --tiledriver=WEBP -r near --processes=4  -z 0-{max_zoom} images/image_reprojected.tif images/tiles/')
